@@ -2,6 +2,7 @@ import { useReducer, useState } from "react";
 
 import PostItem from "./PostItem";
 import img1 from "./image1.jpg";
+import Page from "./Page";
 
 const DUMMY_POST = [
   {
@@ -36,6 +37,8 @@ function App() {
   const clickHandle = () => {
     setTitle("Isuru sandaruwan");
     // Use map to update each post in the array
+
+    //mehidi DUMMY_POST eka array ekak .eka insa item eka gane change karnn oni
     setPost(post.map((item) => ({ ...item, category: "It" })));
   };
   return (
@@ -64,6 +67,8 @@ function App() {
           Click ME
         </button>
       </div>
+
+      <Page/>
     </div>
   );
 }
